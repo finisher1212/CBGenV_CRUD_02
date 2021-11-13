@@ -1,0 +1,13 @@
+{% extends 'firstapp/prod.html' %}
+
+
+
+{% block content %}
+<h1>Do you want to delete {{laptop.name}}?????</h1>
+<form  method="post">
+  {% csrf_token %}
+  <input type="submit" name="" value="DELETE">
+  <a href="{% url 'allprods' %}" class="btn btn-lg btn success">CANCEL</a>
+</form>
+
+{% endblock %}
