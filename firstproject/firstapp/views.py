@@ -29,3 +29,7 @@ class LaptopUpdateView(UpdateView):
     template_name='firstapp/addprod.html'
     fields='__all__'
     success_url = '/showprod'
+
+class LaptopdeleteView(DeleteView):
+    model = Laptop
+    success_url='/showprod'
